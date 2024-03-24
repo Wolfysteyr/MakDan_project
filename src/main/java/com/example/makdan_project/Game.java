@@ -50,5 +50,13 @@ public class Game {
         this.year = year;
     }
 
-
+    @Override
+    public String toString() {
+        return "Game{" +
+                "name='" + name + '\'' +
+                ", genre='" + genre + '\'' +
+                ", description='" + description + '\'' +
+                ", year=" + year +
+                '}';
+    }
 }

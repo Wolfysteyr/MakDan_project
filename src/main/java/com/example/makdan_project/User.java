@@ -2,7 +2,7 @@ package com.example.makdan_project;
 
 import java.util.ArrayList;
 
-public class Users {
+public class User {
     private String username;
     private String password;
     private ArrayList<Game> games;
@@ -32,14 +32,23 @@ public class Users {
         this.games = games;
     }
 
-    public Users(String username, String password, ArrayList<Game> games) {
+    public User(String username, String password, ArrayList<Game> games) {
         this.username = username;
         this.password = password;
         this.games = games;
     }
 
-    public Users() {
+    public User() {
         username = "";
         password = "";
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", games=" + games +
+                '}';
     }
 }
