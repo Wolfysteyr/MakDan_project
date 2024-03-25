@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.util.regex.*;
 import static com.example.makdan_project.Main.users;
+import static com.example.makdan_project.Main.loggedUser;
 
 public class LoginController {
 
@@ -31,6 +32,7 @@ public class LoginController {
     @FXML
     private Label wrongInfo;
 
+
     @FXML
     void login() throws Exception {
         boolean success = false;
@@ -43,11 +45,14 @@ public class LoginController {
             matcher2 = pattern2.matcher(users.get(i).getUsername());
             boolean match1 = matcher1.find();
             boolean match2 = matcher2.find();
-            if(match1 && match2){
-                success = true;
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("main.fxml"));
+            if (match1 && match2) {
+                Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
                 Stage stage = (Stage) loginButton.getScene().getWindow();
+                stage.setTitle("Library");
                 stage.setScene(new Scene(root));
+                success = true;
+                loggedUser = i;
+                break;
             }
         }
         if(!success){

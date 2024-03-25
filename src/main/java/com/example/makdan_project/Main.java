@@ -21,6 +21,8 @@ public class Main extends Application {
     }
     static ArrayList<Game> defaultGames = new ArrayList<>();
     static ArrayList<User> users = new ArrayList<>();
+    static int loggedUser = 0;
+
     public static void main(String[] args) {
 
         defaultGames.add(new Game("Counter-Strike 1.6", "Multiplayer FPS", "Counter-Strike 1.6 is a classic first-person shooter released in 2000. It features two teams, terrorists and counter-terrorists, competing in objective-based scenarios like bomb defusal or hostage rescue.", 2000));
