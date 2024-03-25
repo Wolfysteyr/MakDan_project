@@ -1,12 +1,24 @@
 package com.example.makdan_project;
 
-import java.util.ArrayList;
+import javafx.scene.image.Image;
+
+import java.io.File;
+import java.io.InputStream;
 
 public class Game {
     private String name;
     private String genre;
     private String description;
     private int year;
+    InputStream imgStream;
+
+    public InputStream getImgStream() {
+        return imgStream;
+    }
+
+    public void setImgStream(InputStream imgStream) {
+        this.imgStream = imgStream;
+    }
 
     public String getName() {
         return name;
@@ -40,14 +52,17 @@ public class Game {
         this.year = year;
     }
 
+
+
     public Game() {
     }
 
-    public Game(String name, String genre, String description, int year) {
+    public Game(String name, String genre, String description, int year, InputStream imgStream) {
         this.name = name;
         this.genre = genre;
         this.description = description;
         this.year = year;
+        this.imgStream = imgStream;
     }
 
     @Override

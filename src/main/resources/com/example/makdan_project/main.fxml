@@ -20,9 +20,19 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="gameDesc" layoutX="321.0" layoutY="271.0">
+      <Label fx:id="gameDesc" layoutX="321.0" layoutY="309.0">
          <font>
             <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="gameGenre" layoutX="316.0" layoutY="256.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="gameYear" layoutX="530.0" layoutY="256.0">
+         <font>
+            <Font size="25.0" />
          </font>
       </Label>
    </children>
