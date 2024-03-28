@@ -43,9 +43,12 @@ public class MainController {
     private ArrayList<Button> buttons = new ArrayList<>();
     @FXML
     private VBox vbox;
-
     @FXML
     private Button changeUserButton;
+    @FXML
+    private Button addGameButton;
+    @FXML
+    private Button editGameButton;
 
     @FXML
     public void initialize(){
@@ -74,6 +77,8 @@ public class MainController {
     @FXML
     void gameButtonAction (Event event){
 
+        gameImg.setImage(null);
+
         final Node source = (Node) event.getSource();
         gameName.setText(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getName());
         gameDesc.setText(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getDescription());
@@ -89,6 +94,21 @@ public class MainController {
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         Stage stage = (Stage) changeUserButton.getScene().getWindow();
         stage.setTitle("Login");
+        stage.setScene(new Scene(root));
+    }
+
+    @FXML
+    void addGame() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("addGame.fxml"));
+        Stage stage = (Stage) addGameButton.getScene().getWindow();
+        stage.setTitle("Add Game");
+        stage.setScene(new Scene(root));
+    }
+    @FXML
+    void editGame() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("editGame.fxml"));
+        Stage stage = (Stage) editGameButton.getScene().getWindow();
+        stage.setTitle("Edit Game");
         stage.setScene(new Scene(root));
     }
 }

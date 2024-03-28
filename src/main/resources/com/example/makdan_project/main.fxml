@@ -21,7 +21,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="gameDesc" alignment="TOP_LEFT" layoutX="321.0" layoutY="309.0" prefHeight="243.0" prefWidth="483.0" text="GameDesc">
+      <Label fx:id="gameDesc" alignment="TOP_LEFT" layoutX="321.0" layoutY="309.0" prefHeight="243.0" prefWidth="483.0" text="GameDesc" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
@@ -36,6 +36,8 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button fx:id="changeUserButton" layoutX="27.0" layoutY="732.0" mnemonicParsing="false" onAction="#changeUser" prefHeight="43.0" prefWidth="94.0" text="Change User" />
+      <Button fx:id="changeUserButton" layoutX="30.0" layoutY="732.0" mnemonicParsing="false" onAction="#changeUser" prefHeight="43.0" prefWidth="94.0" text="Change User" />
+      <Button fx:id="addGameButton" layoutX="130.0" layoutY="732.0" mnemonicParsing="false" onAction="#addGame" prefHeight="43.0" prefWidth="94.0" text="Add Game" />
+      <Button fx:id="editGameButton" layoutX="230.0" layoutY="732.0" mnemonicParsing="false" onAction="#editGame" prefHeight="43.0" prefWidth="140.0" text="Edit Current Game" />
    </children>
 </AnchorPane>

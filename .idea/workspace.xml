@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c855e08b-abde-414c-85fe-002caaa5322f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/addGameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/editGameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/addGame.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/editGame.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/main.fxml" afterDir="false" />
     </list>
@@ -119,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711400417935</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed user related problems, onto editing and adding games">
+      <option name="closed" value="true" />
+      <created>1711622666649</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711622666649</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -128,6 +138,7 @@
     <MESSAGE value="Need to finish making log in" />
     <MESSAGE value="Finishing up game buttons" />
     <MESSAGE value="Fixing having a list of games that isn't default, doesn't let using any of the buttons, fix not showing correct user, doesn't show new games as buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing having a list of games that isn't default, doesn't let using any of the buttons, fix not showing correct user, doesn't show new games as buttons" />
+    <MESSAGE value="Fixed user related problems, onto editing and adding games" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed user related problems, onto editing and adding games" />
   </component>
 </project>
