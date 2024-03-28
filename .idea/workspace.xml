@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c855e08b-abde-414c-85fe-002caaa5322f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Counter-Strike_Box.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Counter-Strike_Source_(box_art).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Half-Life_2_cover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Left4Dead2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Left4Dead_Windows_cover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/ebh2zvur73l41.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/main.fxml" afterDir="false" />
@@ -117,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711393853098</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixing having a list of games that isn't default, doesn't let using any of the buttons, fix not showing correct user, doesn't show new games as buttons">
+      <option name="closed" value="true" />
+      <created>1711400417935</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711400417935</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -125,6 +127,7 @@
     <MESSAGE value="cheese" />
     <MESSAGE value="Need to finish making log in" />
     <MESSAGE value="Finishing up game buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finishing up game buttons" />
+    <MESSAGE value="Fixing having a list of games that isn't default, doesn't let using any of the buttons, fix not showing correct user, doesn't show new games as buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing having a list of games that isn't default, doesn't let using any of the buttons, fix not showing correct user, doesn't show new games as buttons" />
   </component>
 </project>

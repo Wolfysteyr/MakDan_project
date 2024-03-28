@@ -35,12 +35,15 @@ public class LoginController {
 
     @FXML
     void login() throws Exception {
+        loggedUser = 0;
+        wrongInfo.setText("");
         boolean success = false;
         Pattern pattern1 = Pattern.compile(passField.getText());
         Pattern pattern2 = Pattern.compile(userField.getText());
         Matcher matcher1;
         Matcher matcher2;
         for (int i = 0; i < users.size(); i++) {
+
             matcher1 = pattern1.matcher(users.get(i).getPassword());
             matcher2 = pattern2.matcher(users.get(i).getUsername());
             boolean match1 = matcher1.find();
@@ -51,8 +54,9 @@ public class LoginController {
                 stage.setTitle("Library");
                 stage.setScene(new Scene(root));
                 success = true;
-                loggedUser = i;
                 break;
+            }else{
+                loggedUser++;
             }
         }
         if(!success){
