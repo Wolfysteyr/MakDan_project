@@ -24,11 +24,8 @@ public class Main extends Application {
     static ArrayList<User> users = new ArrayList<>();
     static int loggedUser;
 
-    public static void main(String[] args) throws FileNotFoundException {
 
-
-
-
+    public static void stupid() throws FileNotFoundException {
         defaultGames.add(new Game("Counter-Strike 1.6", "Multiplayer FPS", "Counter-Strike 1.6 is a classic first-person shooter released in 2000. It features two teams, terrorists and counter-terrorists, competing in objective-based scenarios like bomb defusal or hostage rescue.", 2000, new FileInputStream("src/main/resources/com/example/makdan_project/images/Counter-Strike_Box.jpg") {}));
         defaultGames.add(new Game("Counter-Strike: Source", "Multiplayer FPS", "Counter-Strike: Source, released in 2004, is a first-person shooter game developed by Valve Corporation. It's a remake of the original Counter-Strike using the Source game engine.", 2004, new FileInputStream("src/main/resources/com/example/makdan_project/images/Counter-Strike_Source_(box_art).jpg")));
         defaultGames.add(new Game("Half-Life 1", "FPS", "Half-Life 1, released in 1998, is a groundbreaking first-person shooter developed by Valve Corporation. Players assume the role of physicist Gordon Freeman, who must survive and fight his way through the Black Mesa Research Facility after an experiment goes awry, leading to an alien invasion.", 1998, new FileInputStream("src/main/resources/com/example/makdan_project/images/ebh2zvur73l41.jpg")));
@@ -41,10 +38,9 @@ public class Main extends Application {
 
         users.add(new User("SigmaCreeper", "qwerty", personalGames));
         users.add(new User("abc", "1234", defaultGames));
-
-
-        System.out.println(users.get(1).getGames());
-
+    }
+    public static void main(String[] args) throws FileNotFoundException  {
+        stupid();
         launch();
         // uhhh cheese
     }

@@ -16,11 +16,11 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import static com.example.makdan_project.Main.loggedUser;
-import static com.example.makdan_project.Main.users;
+import static com.example.makdan_project.Main.*;
 
 public class MainController {
 
@@ -50,9 +50,12 @@ public class MainController {
     private Button addGameButton;
     @FXML
     private Button editGameButton;
+    @FXML
+    private ArrayList<Image> imageArray = new ArrayList<>();
 
     @FXML
-    public void initialize(){
+    public void initialize() throws FileNotFoundException {
+
         welcome.setText("Welcome, " + users.get(loggedUser).getUsername());
         for (int i = 0; i < users.get(loggedUser).getGames().size(); i++) {
             Button b = new Button(users.get(loggedUser).getGames().get(i).getName());
@@ -67,12 +70,18 @@ public class MainController {
             b.setId(String.valueOf((i)));
             buttons.add(b);
         }
+        imageArray.clear();
+        for (int i = 0; i < users.get(loggedUser).getGames().size(); i++) {
+            imageArray.add(new Image(users.get(loggedUser).getGames().get(i).getImgStream()));
+        }
 
         gameName.setText(users.get(loggedUser).getGames().get(0).getName());
         gameDesc.setText(users.get(loggedUser).getGames().get(0).getDescription());
         gameGenre.setText(users.get(loggedUser).getGames().get(0).getGenre());
         gameYear.setText(String.valueOf(users.get(loggedUser).getGames().get(0).getYear()));
-        gameImg.setImage(new Image(users.get(loggedUser).getGames().get(0).getImgStream()));
+        gameImg.setImage(imageArray.get(0));
+
+
 
     }
     @FXML
@@ -85,9 +94,7 @@ public class MainController {
         gameDesc.setText(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getDescription());
         gameGenre.setText(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getGenre());
         gameYear.setText(String.valueOf(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getYear()));
-
-
-        gameImg.setImage(new Image(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getImgStream()));
+        gameImg.setImage(imageArray.get(Integer.parseInt(source.getId())));
     }
 
     @FXML
