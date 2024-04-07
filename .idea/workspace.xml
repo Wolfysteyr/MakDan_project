@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c855e08b-abde-414c-85fe-002caaa5322f" name="Changes" comment="">
+    <list default="true" id="c855e08b-abde-414c-85fe-002caaa5322f" name="Changes" comment="Fixed user related problems, made add new game window, but it won't save + make it so that add game and edit game windows appear on top of the main window instead of closing it. After that gotta get to game image selection, user registration, and saving all this shit to file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/SignUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/signUp.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/addGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/addGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/addGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/addGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/editGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/editGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/editGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/editGame.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +50,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\WolfW\Documents\intellij\MakDan_project\src\main\resources\com\example\makdan_project" />
       <recent name="C:\Users\WolfW\Documents\intellij\MakDan_project\src\main\resources\com\example\makdan_project\images" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">

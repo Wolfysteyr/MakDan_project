@@ -62,8 +62,11 @@ public class LoginController {
     }
 
     @FXML
-    void signup(ActionEvent event) {
-
+    void signup() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("signUp.fxml"));
+        Stage stage = (Stage) loginButton.getScene().getWindow();
+        stage.setTitle("Library");
+        stage.setScene(new Scene(root));
     }
 
 }
