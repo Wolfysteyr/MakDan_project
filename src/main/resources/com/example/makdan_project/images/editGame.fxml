@@ -8,7 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.makdan_project.images.EditGameController"
+            fx:controller="com.example.makdan_project.editGameController"
             prefHeight="400.0" prefWidth="600.0">
 
 </AnchorPane>

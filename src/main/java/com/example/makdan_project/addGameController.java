@@ -2,9 +2,13 @@ package com.example.makdan_project;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
@@ -22,7 +26,7 @@ public class addGameController {
     private Button ConfirmButton;
 
     @FXML
-    private TextField GameDesc;
+    private TextArea gameDesc;
 
     @FXML
     private TextField GameGenre;
@@ -35,7 +39,7 @@ public class addGameController {
 
 
     void initialize(){
-        GameDesc.setAlignment(Pos.TOP_CENTER);
+
     }
 
 
@@ -47,9 +51,13 @@ public class addGameController {
 
     @FXML
     void confrim(ActionEvent event) throws Exception {
-        InputStream imgNull = new FileInputStream("");
-        Game game = new Game(GameName.getText(), GameGenre.getText(), GameDesc.getText(), Integer.parseInt(GameYear.getText()), imgNull);
+        InputStream imgNull = InputStream.nullInputStream();
+        Game game = new Game(GameName.getText(), GameGenre.getText(), gameDesc.getText(), Integer.parseInt(GameYear.getText()), imgNull);
         users.get(loggedUser).getGames().add(game);
+        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        Stage stage = (Stage) ConfirmButton.getScene().getWindow();
+        stage.setTitle("Library");
+        stage.setScene(new Scene(root));
     }
 
 }
