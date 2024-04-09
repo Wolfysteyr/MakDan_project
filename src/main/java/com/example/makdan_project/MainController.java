@@ -24,9 +24,8 @@ import static com.example.makdan_project.Main.*;
 
 public class MainController {
 
-
     @FXML
-    private ScrollPane scroll;
+    public static int selectedGame;
     @FXML
     private Label welcome;
     @FXML
@@ -95,6 +94,8 @@ public class MainController {
         gameGenre.setText(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getGenre());
         gameYear.setText(String.valueOf(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getYear()));
         gameImg.setImage(imageArray.get(Integer.parseInt(source.getId())));
+
+        selectedGame = Integer.parseInt(source.getId());
     }
 
     @FXML
@@ -118,6 +119,7 @@ public class MainController {
         Stage stage = (Stage) editGameButton.getScene().getWindow();
         stage.setTitle("Edit Game");
         stage.setScene(new Scene(root));
+        System.out.println(selectedGame);
     }
 }
 

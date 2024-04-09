@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c855e08b-abde-414c-85fe-002caaa5322f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/editGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/editGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/editGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/editGame.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712516361845</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="somewhat fixed the image issue, tho when new games are added, all previous images are gone, why? are they stupid?">
+      <option name="closed" value="true" />
+      <created>1712517548683</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712517548683</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -154,6 +163,7 @@
     <MESSAGE value="Fixed user related problems, onto editing and adding games" />
     <MESSAGE value="Fixed user related problems, made add new game window, but it won't save + make it so that add game and edit game windows appear on top of the main window instead of closing it. After that gotta get to game image selection, user registration, and saving all this shit to file" />
     <MESSAGE value="FUCK EDIT AND ADD GAME WINDOWS APPEARING ON TOP, MAIN WINDOW SHALL DISAPPEAR&#10;&#10;MADE REGISTRATION, GOD IT FUCKING SUCKED&#10;&#10;saving to file next :yeshoney:" />
-    <option name="LAST_COMMIT_MESSAGE" value="FUCK EDIT AND ADD GAME WINDOWS APPEARING ON TOP, MAIN WINDOW SHALL DISAPPEAR&#10;&#10;MADE REGISTRATION, GOD IT FUCKING SUCKED&#10;&#10;saving to file next :yeshoney:" />
+    <MESSAGE value="somewhat fixed the image issue, tho when new games are added, all previous images are gone, why? are they stupid?" />
+    <option name="LAST_COMMIT_MESSAGE" value="somewhat fixed the image issue, tho when new games are added, all previous images are gone, why? are they stupid?" />
   </component>
 </project>
