@@ -3,6 +3,7 @@ module com.example.makdan_project {
     requires javafx.fxml;
     requires org.json;
     requires json.simple;
+    requires com.google.gson;
 
 
     opens com.example.makdan_project to javafx.fxml;

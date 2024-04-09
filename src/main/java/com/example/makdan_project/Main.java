@@ -5,11 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.json.JSONObject;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 
 public class Main extends Application {
 
@@ -42,18 +46,21 @@ public class Main extends Application {
 
             for (int j = 0; j < users.get(i).getGames().size(); j++) {
                 gameCount++;
-                JSONObject gameInfo = new JSONObject();
+                Map gameInfo = new LinkedHashMap(5);
                 gameInfo.put("name", users.get(i).getGames().get(j).getName());
                 gameInfo.put("genre", users.get(i).getGames().get(j).getGenre());
                 gameInfo.put("desc", users.get(i).getGames().get(j).getDescription());
                 gameInfo.put("year", users.get(i).getGames().get(j).getYear());
-                gameInfo.put("img", users.get(i).getGames().get(j).imgStream.toString());
+                gameInfo.put("img", users.get(i).getGames().get(j).getImgStream().toString());
                 jsonGames.put(String.valueOf(j), gameInfo);
             }
             userJSON.put("games", jsonGames);
-            userJSONs.add(userJSON);
+            userJSONs.put(i, userJSON);
         }
+
+
         JSONObject usersJSON = new JSONObject(userJSONs);
+
         usersJSON.put("user count", users.size());
         FileWriter writer = new FileWriter("src/main/resources/usersJSON.txt");
         writer.write(usersJSON.toString());
@@ -63,20 +70,30 @@ public class Main extends Application {
 
     }
 
-    static ArrayList<JSONObject> userJSONs = new ArrayList<>();
-    public static void initialReadFromJSON() throws Exception {
-        users.clear();
 
-        Object obj = new JSONParser().parse(new FileReader("usersJSON.txt"));
+
+    static JSONObject userJSONs = new JSONObject();
+
+    public static void initialReadFromJSON() throws Exception {
+
+
+        Object obj = new JSONParser().parse(new FileReader("src/main/resources/usersJSON.txt"));
         JSONObject jo = (JSONObject) obj;
         for (int i = 0; i < userCount; i++) {
             ArrayList<Game> games = new ArrayList<>();
-            for (int j = 0; j < gameCount; j++) {
-                games.add(new Game((String) jo.get("name"), (String) jo.get("genre"), (String) jo.get("desc"), Integer.parseInt((String) jo.get("year")), new FileInputStream((String) jo.get("img"))));
+            Map gamesMap = ((Map) jo.get(("games")));
+            Iterator<Map.Entry> itr1 = gamesMap.entrySet().iterator();
+            while(itr1.hasNext()) {
+                Map.Entry pair = itr1.next();
+                games.add(new Game((String) pair.getValue(), (String) pair.getValue(), (String) pair.getValue(), Integer.parseInt((String) pair.getValue()), new FileInputStream((String) pair.getValue())));
+
             }
             users.add(new User((String) jo.get("username"), (String) jo.get("password"), games));
+
         }
+        System.out.println("bababoey");
     }
+
 
 
     public static void stupid() throws FileNotFoundException {
@@ -95,7 +112,7 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) throws FileNotFoundException, Exception  {
+    public static void main(String[] args) throws Exception  {
         stupid();
         SaveToJSON();
         initialReadFromJSON();

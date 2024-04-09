@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c855e08b-abde-414c-85fe-002caaa5322f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/SignUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +38,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2e9C8eu1F2GBOmVN32LLFlKYi2t" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,7 +56,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/WolfW/.m2/repository/org/json/json/20240303/json-20240303.jar",
+    "last_opened_file_path": "C:/Users/WolfW/Downloads/gson-gson-parent-2.10.1/lib",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.26467204",
@@ -175,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712677456405</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="possibly done, but maven is raping my ass so gotta do something unknown and maybe risky">
+      <option name="closed" value="true" />
+      <created>1712694270993</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712694270993</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -189,6 +200,7 @@
     <MESSAGE value="FUCK EDIT AND ADD GAME WINDOWS APPEARING ON TOP, MAIN WINDOW SHALL DISAPPEAR&#10;&#10;MADE REGISTRATION, GOD IT FUCKING SUCKED&#10;&#10;saving to file next :yeshoney:" />
     <MESSAGE value="somewhat fixed the image issue, tho when new games are added, all previous images are gone, why? are they stupid?" />
     <MESSAGE value="made the edit game, now onto saving" />
-    <option name="LAST_COMMIT_MESSAGE" value="made the edit game, now onto saving" />
+    <MESSAGE value="possibly done, but maven is raping my ass so gotta do something unknown and maybe risky" />
+    <option name="LAST_COMMIT_MESSAGE" value="possibly done, but maven is raping my ass so gotta do something unknown and maybe risky" />
   </component>
 </project>
