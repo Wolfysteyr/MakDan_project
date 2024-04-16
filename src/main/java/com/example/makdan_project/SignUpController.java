@@ -13,8 +13,7 @@ import javafx.stage.Stage;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.example.makdan_project.Main.defaultGames;
-import static com.example.makdan_project.Main.users;
+import static com.example.makdan_project.Main.*;
 
 public class SignUpController {
 
@@ -52,6 +51,7 @@ public class SignUpController {
                 Stage stage = (Stage) signupButton.getScene().getWindow();
                 stage.setTitle("Login");
                 stage.setScene(new Scene(root));
+                SaveToJSON();
                 break;
             } else if (!passField.getText().equals(passField1.getText())) {
                 wrongInfo.setText("The passwords do not match!");

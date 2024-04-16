@@ -8,7 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Region;
@@ -17,10 +16,10 @@ import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
-import static com.example.makdan_project.Main.*;
+import static com.example.makdan_project.Main.loggedUser;
+import static com.example.makdan_project.Main.users;
 
 public class MainController {
 
@@ -50,7 +49,7 @@ public class MainController {
     @FXML
     private Button editGameButton;
     @FXML
-    private ArrayList<Image> imageArray = new ArrayList<>();
+    private ArrayList<String> imageArray = new ArrayList<>();
 
     @FXML
     public void initialize() throws FileNotFoundException {
@@ -61,7 +60,13 @@ public class MainController {
             Region region = new Region();
             region.setPrefSize(356, 50);
             b.setPrefSize(356, 50);
-            b.setOnAction(e -> gameButtonAction(e));
+            b.setOnAction(e -> {
+                try {
+                    gameButtonAction(e);
+                } catch (FileNotFoundException ex) {
+                    throw new RuntimeException(ex);
+                }
+            });
 
             vbox.getChildren().add(region);
             vbox.getChildren().add(b);
@@ -70,33 +75,41 @@ public class MainController {
             buttons.add(b);
         }
         imageArray.clear();
+
         for (int i = 0; i < users.get(loggedUser).getGames().size(); i++) {
-            imageArray.add(new Image(users.get(loggedUser).getGames().get(i).getImgStream()));
+            String imagePath = users.get(loggedUser).getGames().get(i).getImage();
+            imageArray.add(imagePath);
         }
 
-        gameName.setText(users.get(loggedUser).getGames().get(0).getName());
+
+            gameName.setText(users.get(loggedUser).getGames().get(0).getName());
         gameDesc.setText(users.get(loggedUser).getGames().get(0).getDescription());
         gameGenre.setText(users.get(loggedUser).getGames().get(0).getGenre());
         gameYear.setText(String.valueOf(users.get(loggedUser).getGames().get(0).getYear()));
-        gameImg.setImage(imageArray.get(0));
+
+
 
 
 
     }
     @FXML
-    void gameButtonAction (Event event){
-
+    void gameButtonAction(Event event) throws FileNotFoundException {
         gameImg.setImage(null);
 
         final Node source = (Node) event.getSource();
-        gameName.setText(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getName());
-        gameDesc.setText(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getDescription());
-        gameGenre.setText(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getGenre());
-        gameYear.setText(String.valueOf(users.get(loggedUser).getGames().get(Integer.parseInt(source.getId())).getYear()));
-        gameImg.setImage(imageArray.get(Integer.parseInt(source.getId())));
+        int selectedIndex = Integer.parseInt(source.getId());
+        String imagePath = imageArray.get(selectedIndex);
 
-        selectedGame = Integer.parseInt(source.getId());
+        gameName.setText(users.get(loggedUser).getGames().get(selectedIndex).getName());
+        gameDesc.setText(users.get(loggedUser).getGames().get(selectedIndex).getDescription());
+        gameGenre.setText(users.get(loggedUser).getGames().get(selectedIndex).getGenre());
+        gameYear.setText(String.valueOf(users.get(loggedUser).getGames().get(selectedIndex).getYear()));
+
+        gameImg.setImage(new Image(new FileInputStream(imagePath)));
+
+        selectedGame = selectedIndex;
     }
+
 
     @FXML
     void changeUser() throws Exception{
