@@ -6,29 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c855e08b-abde-414c-85fe-002caaa5322f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noliktava/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noliktava/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noliktava/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noliktava/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/SignUpController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noliktava/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/addGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noliktava/addGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/makdan_project/editGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noliktava/editGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/addGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/noliktava/addGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/editGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/noliktava/editGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Counter-Strike_Box.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/noliktava/images/Counter-Strike_Box.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Counter-Strike_Source_(box_art).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/noliktava/images/Counter-Strike_Source_(box_art).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/noliktava/images/Empty.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Half-Life_2_cover.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/noliktava/images/Half-Life_2_cover.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Left4Dead2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/noliktava/images/Left4Dead2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/Left4Dead_Windows_cover.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/noliktava/images/Left4Dead_Windows_cover.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/images/ebh2zvur73l41.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/noliktava/images/ebh2zvur73l41.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/noliktava/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/noliktava/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/makdan_project/signUp.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noliktava/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noliktava/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noliktava/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noliktava/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noliktava/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noliktava/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noliktava/addGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noliktava/addGameController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +28,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="project" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -226,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713297587940</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="started">
+      <option name="closed" value="true" />
+      <created>1718829073694</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1718829073694</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -243,7 +245,8 @@
     <MESSAGE value="possibly done, but maven is raping my ass so gotta do something unknown and maybe risky" />
     <MESSAGE value="GETTING THERE. I AM CLOSE." />
     <MESSAGE value="it is finished. i want to sleep." />
-    <option name="LAST_COMMIT_MESSAGE" value="it is finished. i want to sleep." />
+    <MESSAGE value="started" />
+    <option name="LAST_COMMIT_MESSAGE" value="started" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

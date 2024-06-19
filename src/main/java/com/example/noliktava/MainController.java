@@ -19,73 +19,50 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 
+import static com.example.noliktava.Main.workerID;
 import static com.example.noliktava.Main.workers;
 
 public class MainController {
 
     @FXML
-    public static int selectedGame;
-    @FXML
-    private Label welcome;
-    @FXML
-    private Label gameDesc;
+    private Button addItemButton;
 
     @FXML
-    private Label gameName;
+    private Button deleteItemButton;
+
     @FXML
-    private ImageView gameImg;
+    private Button editItemButton;
+
     @FXML
-    private Label gameYear;
+    private Label itemAmount;
+
     @FXML
-    private Label gameGenre;
+    private Label itemLoc;
+
     @FXML
-    private ArrayList<Button> buttons = new ArrayList<>();
+    private Label itemName;
+
+    @FXML
+    private Label itemNum;
+
+    @FXML
+    private Button logoutButton;
+
     @FXML
     private VBox vbox;
-    @FXML
-    private Button changeUserButton;
-    @FXML
-    private Button addGameButton;
-    @FXML
-    private Button editGameButton;
-    @FXML
-    private ArrayList<String> imageArray = new ArrayList<>();
 
+    @FXML
+    private Label welcome;
+
+    @FXML
+    private ArrayList<Button> buttons = new ArrayList<>();
+
+    private int selectedItem;
     @FXML
     public void initialize() throws FileNotFoundException {
 
-        welcome.setText("Welcome, " + workers.get(loggedUser).getUsername());
-        for (int i = 0; i < workers.get(loggedUser).getGames().size(); i++) {
-            Button b = new Button(workers.get(loggedUser).getGames().get(i).getName());
-            Region region = new Region();
-            region.setPrefSize(356, 50);
-            b.setPrefSize(356, 50);
-            b.setOnAction(e -> {
-                try {
-                    gameButtonAction(e);
-                } catch (FileNotFoundException ex) {
-                    throw new RuntimeException(ex);
-                }
-            });
+        welcome.setText("Welcome, worker" + workerID);
 
-            vbox.getChildren().add(region);
-            vbox.getChildren().add(b);
-
-            b.setId(String.valueOf((i)));
-            buttons.add(b);
-        }
-        imageArray.clear();
-
-        for (int i = 0; i < workers.get(loggedUser).getGames().size(); i++) {
-            String imagePath = workers.get(loggedUser).getGames().get(i).getImage();
-            imageArray.add(imagePath);
-        }
-
-
-            gameName.setText(workers.get(loggedUser).getGames().get(0).getName());
-        gameDesc.setText(workers.get(loggedUser).getGames().get(0).getDescription());
-        gameGenre.setText(workers.get(loggedUser).getGames().get(0).getGenre());
-        gameYear.setText(String.valueOf(workers.get(loggedUser).getGames().get(0).getYear()));
 
 
 
@@ -107,7 +84,7 @@ public class MainController {
 
         gameImg.setImage(new Image(new FileInputStream(imagePath)));
 
-        selectedGame = selectedIndex;
+        selectedItem = selectedIndex;
     }
 
 
@@ -132,7 +109,7 @@ public class MainController {
         Stage stage = (Stage) editGameButton.getScene().getWindow();
         stage.setTitle("Edit Item");
         stage.setScene(new Scene(root));
-        System.out.println(selectedGame);
+        System.out.println(selectedItem);
     }
 }
 

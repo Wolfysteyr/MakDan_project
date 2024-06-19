@@ -34,11 +34,7 @@ public class addGameController {
 
     @FXML
     private TextField GameYear;
-    @FXML
-    private Button imgButton;
 
-    private String image;
-    private String imageName;
 
 
     void initialize(){
@@ -57,12 +53,8 @@ public class addGameController {
     @FXML
     void confirm() throws Exception {
 
-        if(image == null){
-            image = "src\\main\\resources\\com\\example\\noliktava\\images\\Empty.png";
 
-        }
 
-        new File("src\\main\\resources\\com\\example\\noliktava\\images\\"+imageName);
         Item item = new Item(GameName.getText(), GameGenre.getText(), gameDesc.getText(), Integer.parseInt(GameYear.getText()), image);
         workers.get(loggedUser).getGames().add(item);
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));

@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 public class Main extends Application {
 
+    static int workerID;
 
     @Override
     public void start(Stage stage) throws IOException {
