@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.makdan_project.addGameController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.noliktava.addGameController">
    <children>
       <TextField fx:id="GameName" alignment="CENTER" layoutX="226.0" layoutY="50.0" prefHeight="32.0" prefWidth="150.0" promptText="Game Name" />
       <TextField fx:id="GameGenre" alignment="CENTER" layoutX="226.0" layoutY="100.0" prefHeight="32.0" prefWidth="150.0" promptText="Game Genre" />

@@ -1,4 +1,4 @@
-module com.example.makdan_project {
+module com.example.noliktava {
     requires javafx.controls;
     requires javafx.fxml;
     requires org.json;
@@ -6,6 +6,6 @@ module com.example.makdan_project {
     requires com.google.gson;
 
 
-    opens com.example.makdan_project to javafx.fxml;
-    exports com.example.makdan_project;
+    opens com.example.noliktava to javafx.fxml;
+    exports com.example.noliktava;
 }

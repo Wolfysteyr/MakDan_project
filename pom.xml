@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>MakDan_project</artifactId>
+    <artifactId>noliktava</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>MakDan_project</name>
 
@@ -85,7 +85,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.makdan_project/com.example.makdan_project.Main
+                            <mainClass>com.example.makdan_project/com.example.noliktava.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

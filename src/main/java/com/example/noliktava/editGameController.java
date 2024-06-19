@@ -1,4 +1,4 @@
-package com.example.makdan_project;
+package com.example.noliktava;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,8 +13,8 @@ import javafx.stage.Stage;
 
 import java.io.File;
 
-import static com.example.makdan_project.Main.*;
-import static com.example.makdan_project.MainController.selectedGame;
+import static com.example.noliktava.Main.*;
+import static com.example.noliktava.MainController.selectedGame;
 
 public class editGameController {
 
@@ -51,19 +51,19 @@ public class editGameController {
 
     void checkIfNull(){
         if(gameName.equals("")){
-            gameName = users.get(loggedUser).getGames().get(selectedGame).getName();
+            gameName = workers.get(loggedUser).getGames().get(selectedGame).getName();
         }
         if(gameGenre.equals("")){
-           gameGenre = users.get(loggedUser).getGames().get(selectedGame).getGenre();
+           gameGenre = workers.get(loggedUser).getGames().get(selectedGame).getGenre();
         }
         if(gameYear.equals("")){
-            gameYear = String.valueOf(users.get(loggedUser).getGames().get(selectedGame).getYear());
+            gameYear = String.valueOf(workers.get(loggedUser).getGames().get(selectedGame).getYear());
         }
         if(gameDescription.equals("")){
-            gameDescription = users.get(loggedUser).getGames().get(selectedGame).getDescription();
+            gameDescription = workers.get(loggedUser).getGames().get(selectedGame).getDescription();
         }
         if(image == null){
-            image = users.get(loggedUser).getGames().get(selectedGame).getImage();
+            image = workers.get(loggedUser).getGames().get(selectedGame).getImage();
         }
     }
 
@@ -88,8 +88,8 @@ public class editGameController {
 
         checkIfNull();
 
-        Game game = new Game(gameName, gameGenre, gameDescription, Integer.parseInt(gameYear), image);
-        users.get(loggedUser).getGames().set(selectedGame, game);
+        Item item = new Item(gameName, gameGenre, gameDescription, Integer.parseInt(gameYear), image);
+        workers.get(loggedUser).getGames().set(selectedGame, item);
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         Stage stage = (Stage) ConfirmButton.getScene().getWindow();
         stage.setTitle("Library");

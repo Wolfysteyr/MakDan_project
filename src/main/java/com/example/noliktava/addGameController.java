@@ -1,4 +1,4 @@
-package com.example.makdan_project;
+package com.example.noliktava;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 
-import static com.example.makdan_project.Main.*;
+import static com.example.noliktava.Main.*;
 
 public class addGameController {
 
@@ -58,16 +58,16 @@ public class addGameController {
     void confirm() throws Exception {
 
         if(image == null){
-            image = "src\\main\\resources\\com\\example\\makdan_project\\images\\Empty.png";
+            image = "src\\main\\resources\\com\\example\\noliktava\\images\\Empty.png";
 
         }
 
-        new File("src\\main\\resources\\com\\example\\makdan_project\\images\\"+imageName);
-        Game game = new Game(GameName.getText(), GameGenre.getText(), gameDesc.getText(), Integer.parseInt(GameYear.getText()), image);
-        users.get(loggedUser).getGames().add(game);
+        new File("src\\main\\resources\\com\\example\\noliktava\\images\\"+imageName);
+        Item item = new Item(GameName.getText(), GameGenre.getText(), gameDesc.getText(), Integer.parseInt(GameYear.getText()), image);
+        workers.get(loggedUser).getGames().add(item);
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         Stage stage = (Stage) ConfirmButton.getScene().getWindow();
-        stage.setTitle("Library");
+        stage.setTitle("Warehouse");
         stage.setScene(new Scene(root));
         SaveToJSON();
     }

@@ -1,4 +1,4 @@
-package com.example.makdan_project;
+package com.example.noliktava;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -18,8 +18,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
-import static com.example.makdan_project.Main.loggedUser;
-import static com.example.makdan_project.Main.users;
+
+import static com.example.noliktava.Main.workers;
 
 public class MainController {
 
@@ -54,9 +54,9 @@ public class MainController {
     @FXML
     public void initialize() throws FileNotFoundException {
 
-        welcome.setText("Welcome, " + users.get(loggedUser).getUsername());
-        for (int i = 0; i < users.get(loggedUser).getGames().size(); i++) {
-            Button b = new Button(users.get(loggedUser).getGames().get(i).getName());
+        welcome.setText("Welcome, " + workers.get(loggedUser).getUsername());
+        for (int i = 0; i < workers.get(loggedUser).getGames().size(); i++) {
+            Button b = new Button(workers.get(loggedUser).getGames().get(i).getName());
             Region region = new Region();
             region.setPrefSize(356, 50);
             b.setPrefSize(356, 50);
@@ -76,16 +76,16 @@ public class MainController {
         }
         imageArray.clear();
 
-        for (int i = 0; i < users.get(loggedUser).getGames().size(); i++) {
-            String imagePath = users.get(loggedUser).getGames().get(i).getImage();
+        for (int i = 0; i < workers.get(loggedUser).getGames().size(); i++) {
+            String imagePath = workers.get(loggedUser).getGames().get(i).getImage();
             imageArray.add(imagePath);
         }
 
 
-            gameName.setText(users.get(loggedUser).getGames().get(0).getName());
-        gameDesc.setText(users.get(loggedUser).getGames().get(0).getDescription());
-        gameGenre.setText(users.get(loggedUser).getGames().get(0).getGenre());
-        gameYear.setText(String.valueOf(users.get(loggedUser).getGames().get(0).getYear()));
+            gameName.setText(workers.get(loggedUser).getGames().get(0).getName());
+        gameDesc.setText(workers.get(loggedUser).getGames().get(0).getDescription());
+        gameGenre.setText(workers.get(loggedUser).getGames().get(0).getGenre());
+        gameYear.setText(String.valueOf(workers.get(loggedUser).getGames().get(0).getYear()));
 
 
 
@@ -100,10 +100,10 @@ public class MainController {
         int selectedIndex = Integer.parseInt(source.getId());
         String imagePath = imageArray.get(selectedIndex);
 
-        gameName.setText(users.get(loggedUser).getGames().get(selectedIndex).getName());
-        gameDesc.setText(users.get(loggedUser).getGames().get(selectedIndex).getDescription());
-        gameGenre.setText(users.get(loggedUser).getGames().get(selectedIndex).getGenre());
-        gameYear.setText(String.valueOf(users.get(loggedUser).getGames().get(selectedIndex).getYear()));
+        gameName.setText(workers.get(loggedUser).getGames().get(selectedIndex).getName());
+        gameDesc.setText(workers.get(loggedUser).getGames().get(selectedIndex).getDescription());
+        gameGenre.setText(workers.get(loggedUser).getGames().get(selectedIndex).getGenre());
+        gameYear.setText(String.valueOf(workers.get(loggedUser).getGames().get(selectedIndex).getYear()));
 
         gameImg.setImage(new Image(new FileInputStream(imagePath)));
 
@@ -123,14 +123,14 @@ public class MainController {
     void addGame() throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("addGame.fxml"));
         Stage stage = (Stage) addGameButton.getScene().getWindow();
-        stage.setTitle("Add Game");
+        stage.setTitle("Add Item");
         stage.setScene(new Scene(root));
     }
     @FXML
     void editGame() throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("editGame.fxml"));
         Stage stage = (Stage) editGameButton.getScene().getWindow();
-        stage.setTitle("Edit Game");
+        stage.setTitle("Edit Item");
         stage.setScene(new Scene(root));
         System.out.println(selectedGame);
     }
