@@ -26,25 +26,25 @@ public class LoginController {
 
     @FXML
     void login() throws Exception {
-        boolean success = true;
+        boolean success = false;
 
         for (int i = 0; i < workers.size(); i++) {
             if (Integer.parseInt(idField.getText()) == workers.get(i).getID()) {
 
-                workerID = workers.get(i).getID();
+                workerID = i;
 
                 Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-                Stage stage = new Stage();
+                Stage stage = (Stage) loginButton.getScene().getWindow();
                 stage.setTitle("Warehouse");
                 stage.setScene(new Scene(root));
                 stage.show();
+                success = true;
 
                 break;
-            } else success = false;
-
-            if (!success) {
-                wrongInfo.setText("Wrong worker ID!");
             }
+        }
+        if (!success) {
+            wrongInfo.setText("Wrong worker ID!");
         }
 
 

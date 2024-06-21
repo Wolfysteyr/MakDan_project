@@ -6,16 +6,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.File;
+import static com.example.noliktava.Main.SaveToJSON;
+import static com.example.noliktava.Main.items;
 
-import static com.example.noliktava.Main.*;
-
-public class addGameController {
+public class addItemController {
 
     @FXML
     private Button CancelButton;
@@ -24,16 +21,16 @@ public class addGameController {
     private Button ConfirmButton;
 
     @FXML
-    private TextArea gameDesc;
+    private TextField ItemAmount;
 
     @FXML
-    private TextField GameGenre;
+    private TextField ItemLoc;
 
     @FXML
-    private TextField GameName;
+    private TextField ItemName;
 
     @FXML
-    private TextField GameYear;
+    private TextField ItemNum;
 
 
 
@@ -46,17 +43,15 @@ public class addGameController {
     void cancel(ActionEvent event) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         Stage stage = (Stage) CancelButton.getScene().getWindow();
-        stage.setTitle("Library");
+        stage.setTitle("Warehouse");
         stage.setScene(new Scene(root));
     }
 
     @FXML
     void confirm() throws Exception {
 
-
-
-        Item item = new Item(GameName.getText(), GameGenre.getText(), gameDesc.getText(), Integer.parseInt(GameYear.getText()), image);
-        workers.get(loggedUser).getGames().add(item);
+        Item item = new Item(ItemName.getText(), Integer.parseInt(ItemNum.getText()), Integer.parseInt(ItemAmount.getText()), ItemLoc.getText());
+        items.add(item);
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         Stage stage = (Stage) ConfirmButton.getScene().getWindow();
         stage.setTitle("Warehouse");
@@ -64,14 +59,5 @@ public class addGameController {
         SaveToJSON();
     }
 
-    @FXML
-    void chooseImage(){
-        FileChooser fileChooser = new FileChooser();
-        File selectedFile = fileChooser.showOpenDialog(imgButton.getScene().getWindow());
-        File img = selectedFile;
-
-        image = img.getPath();
-        imageName = img.getName();
-    }
 
 }

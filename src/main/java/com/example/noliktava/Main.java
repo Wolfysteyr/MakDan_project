@@ -29,21 +29,25 @@ public class Main extends Application {
 
     static ArrayList<Worker> workers = new ArrayList<>();
     static JSONObject workerJSONs = new JSONObject();
+    static ArrayList<Item> items = new ArrayList<>();
 
 
 
     public static void SaveToJSON() throws Exception {
-
+        JSONArray workersArray = new JSONArray();
 
         for (Worker worker : workers) {
-
-            workerJSONs.put("username", worker.getName());
-            workerJSONs.put("id", worker.getID());
-
+            JSONObject workerJSON = new JSONObject();
+            workerJSON.put("username", worker.getName());
+            workerJSON.put("id", worker.getID());
+            workersArray.add(workerJSON);
         }
 
+        JSONObject jo = new JSONObject();
+        jo.put("workers", workersArray);
+
         FileWriter writer = new FileWriter("src/main/resources/workersJSON.json");
-        writer.write(workerJSONs.toJSONString());
+        writer.write(jo.toJSONString());
 
         writer.flush();
         writer.close();
@@ -54,19 +58,19 @@ public class Main extends Application {
 
 
 
-    // this entire method was written by chatgpt because I HATE IT
+    // this entire method was written by chatgpt
     public static void initialReadFromJSON() throws Exception {
         JSONParser parser = new JSONParser();
         FileReader reader = new FileReader("src/main/resources/workersJSON.json");
         JSONObject jo = (JSONObject) parser.parse(reader);
 
-        JSONArray usersArray = (JSONArray) jo.get("workers");
-        for (Object userObj : usersArray) {
-            JSONObject userJSON = (JSONObject) userObj;
-            int id = (Integer) userJSON.get("id");
-            String name = (String) userJSON.get("name");
+        JSONArray workersArray = (JSONArray) jo.get("workers");
+        for (Object workerObj : workersArray) {
+            JSONObject workerJSON = (JSONObject) workerObj;
+            long id = (long) workerJSON.get("id");
+            String name = (String) workerJSON.get("name");
 
-            workers.add(new Worker(id, name));
+            workers.add(new Worker((int) id, name));
         }
 
         reader.close();
@@ -89,6 +93,10 @@ public class Main extends Application {
         workers.add(new Worker(1255, "Jo"));
         workers.add(new Worker(2251, "Z"));
 
+        items.add(new Item("Galvanized Square Steel", 001, 223, "2BA"));
+        items.add(new Item("Eco-Friendly Wood Veneers", 002, 2516, "2BB"));
+
+        SaveToJSON();
         initialReadFromJSON();
         launch();
 

@@ -8,19 +8,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-
-
-import static com.example.noliktava.Main.workerID;
-import static com.example.noliktava.Main.workers;
+import static com.example.noliktava.Main.*;
 
 public class MainController {
 
@@ -54,62 +46,74 @@ public class MainController {
     @FXML
     private Label welcome;
 
+
+    static int selectedItem;
     @FXML
-    private ArrayList<Button> buttons = new ArrayList<>();
+    public void initialize() {
 
-    private int selectedItem;
-    @FXML
-    public void initialize() throws FileNotFoundException {
+        welcome.setText("Welcome, " + workers.get(workerID).getName());
 
-        welcome.setText("Welcome, worker" + workerID);
+        for (int i = 0; i < items.size(); i++) {
+            Region r = new Region();
+            Button b = new Button(items.get(i).getName());
+            r.setPrefSize(356, 50);
+            b.setPrefSize(356, 50);
+            b.setOnAction(e ->{
+                ItemButtonAction(e);
+            });
 
-
+            vbox.getChildren().add(r);
+            vbox.getChildren().add(b);
+            b.setId(String.valueOf(i));
+        }
 
 
 
 
     }
     @FXML
-    void gameButtonAction(Event event) throws FileNotFoundException {
-        gameImg.setImage(null);
-
+    void ItemButtonAction(Event event) {
         final Node source = (Node) event.getSource();
         int selectedIndex = Integer.parseInt(source.getId());
-        String imagePath = imageArray.get(selectedIndex);
-
-        gameName.setText(workers.get(loggedUser).getGames().get(selectedIndex).getName());
-        gameDesc.setText(workers.get(loggedUser).getGames().get(selectedIndex).getDescription());
-        gameGenre.setText(workers.get(loggedUser).getGames().get(selectedIndex).getGenre());
-        gameYear.setText(String.valueOf(workers.get(loggedUser).getGames().get(selectedIndex).getYear()));
-
-        gameImg.setImage(new Image(new FileInputStream(imagePath)));
-
         selectedItem = selectedIndex;
+
+        itemName.setText("Item: " + items.get(selectedItem).getName());
+        itemNum.setText("#" + items.get(selectedItem).getNumber());
+        itemAmount.setText("Amount: " + items.get(selectedItem).getAmount());
+        itemLoc.setText("@ " + items.get(selectedItem).getLocation());
+
+
     }
 
 
     @FXML
-    void changeUser() throws Exception{
+    void Logout() throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        Stage stage = (Stage) changeUserButton.getScene().getWindow();
+        Stage stage = (Stage) logoutButton.getScene().getWindow();
         stage.setTitle("Login");
         stage.setScene(new Scene(root));
     }
 
     @FXML
-    void addGame() throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("addGame.fxml"));
-        Stage stage = (Stage) addGameButton.getScene().getWindow();
+    void AddItem() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("addItem.fxml"));
+        Stage stage = (Stage) addItemButton.getScene().getWindow();
         stage.setTitle("Add Item");
         stage.setScene(new Scene(root));
     }
     @FXML
-    void editGame() throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("editGame.fxml"));
-        Stage stage = (Stage) editGameButton.getScene().getWindow();
+    void EditItem() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("editItem.fxml"));
+        Stage stage = (Stage) editItemButton.getScene().getWindow();
         stage.setTitle("Edit Item");
         stage.setScene(new Scene(root));
-        System.out.println(selectedItem);
+    }
+
+    @FXML
+    void DeleteItem() throws Exception{
+
+
+
     }
 }
 

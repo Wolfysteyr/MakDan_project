@@ -2,9 +2,9 @@ package com.example.noliktava;
 
 public class Item {
     private String name;
-    private String number;
-    private String amount;
-    private int location;
+    private int number;
+    private int amount;
+    private String  location;
 
     public String getName() {
         return name;
@@ -14,34 +14,34 @@ public class Item {
         this.name = name;
     }
 
-    public String getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 
-    public String getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 
-    public int getLocation() {
+    public String getLocation() {
         return location;
     }
 
-    public void setLocation(int location) {
+    public void setLocation(String location) {
         this.location = location;
     }
 
     public Item() {
     }
 
-    public Item(String name, String number, String amount, int location) {
+    public Item(String name, int number, int amount, String location) {
         this.name = name;
         this.number = number;
         this.amount = amount;
