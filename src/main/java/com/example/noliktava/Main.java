@@ -28,12 +28,13 @@ public class Main extends Application {
     }
 
     static ArrayList<Worker> workers = new ArrayList<>();
-    static JSONObject workerJSONs = new JSONObject();
     static ArrayList<Item> items = new ArrayList<>();
 
 
 
-    public static void SaveToJSON() throws Exception {
+    // all of these methods were written by chatgpt
+
+    public static void SaveWorkersToJSON() throws Exception {
         JSONArray workersArray = new JSONArray();
 
         for (Worker worker : workers) {
@@ -53,13 +54,30 @@ public class Main extends Application {
         writer.close();
     }
 
+    public static void SaveItemsToJSON() throws Exception {
+        JSONArray itemsArray = new JSONArray();
+
+        for (Item item : items) {
+            JSONObject itemJSON = new JSONObject();
+            itemJSON.put("name", item.getName());
+            itemJSON.put("number", item.getNumber());
+            itemJSON.put("amount", item.getAmount());
+            itemJSON.put("location", item.getLocation());
+            itemsArray.add(itemJSON);
+        }
+
+        JSONObject jo = new JSONObject();
+        jo.put("items", itemsArray);
+
+        FileWriter writer = new FileWriter("src/main/resources/itemsJSON.json");
+        writer.write(jo.toJSONString());
+
+        writer.flush();
+        writer.close();
+    }
 
 
-
-
-
-    // this entire method was written by chatgpt
-    public static void initialReadFromJSON() throws Exception {
+    public static void initialWorkersReadFromJSON() throws Exception {
         JSONParser parser = new JSONParser();
         FileReader reader = new FileReader("src/main/resources/workersJSON.json");
         JSONObject jo = (JSONObject) parser.parse(reader);
@@ -76,28 +94,32 @@ public class Main extends Application {
         reader.close();
     }
 
+    public static void initialItemsReadFromJSON() throws Exception {
+        JSONParser parser = new JSONParser();
+        FileReader reader = new FileReader("src/main/resources/itemsJSON.json");
+        JSONObject jo = (JSONObject) parser.parse(reader);
 
+        if (jo.containsKey("items")) {
+            JSONArray itemsArray = (JSONArray) jo.get("items");
+            for (Object itemObj : itemsArray) {
+                JSONObject itemJSON = (JSONObject) itemObj;
+                String name = (String) itemJSON.get("name");
+                long number = (Long) itemJSON.get("number"); // use long for JSON number handling
+                long amount = (Long) itemJSON.get("amount"); // use long for JSON number handling
+                String location = (String) itemJSON.get("location");
 
+                items.add(new Item(name, (int) number, (int) amount, location)); // cast long to int
+            }
+        } else {
+            System.out.println("No items key found in JSON.");
+        }
 
-
-
-    public static void stupid() {
-
+        reader.close();
     }
 
-
-
-
     public static void main(String[] args) throws Exception  {
-
-        workers.add(new Worker(1255, "Jo"));
-        workers.add(new Worker(2251, "Z"));
-
-        items.add(new Item("Galvanized Square Steel", 001, 223, "2BA"));
-        items.add(new Item("Eco-Friendly Wood Veneers", 002, 2516, "2BB"));
-
-        SaveToJSON();
-        initialReadFromJSON();
+        initialWorkersReadFromJSON();
+        initialItemsReadFromJSON();
         launch();
 
 

@@ -6,12 +6,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.noliktava.addItemController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #bfb69d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.noliktava.addItemController">
    <children>
       <TextField fx:id="ItemName" alignment="CENTER" layoutX="226.0" layoutY="50.0" prefHeight="32.0" prefWidth="150.0" promptText="Item Name" />
       <TextField fx:id="ItemNum" alignment="CENTER" layoutX="226.0" layoutY="100.0" prefHeight="32.0" prefWidth="150.0" promptText="Item Number" />
       <TextField fx:id="ItemAmount" alignment="CENTER" layoutX="226.0" layoutY="150.0" prefHeight="32.0" prefWidth="150.0" promptText="Item Amount" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="-16.0" prefHeight="82.0" prefWidth="347.0" text="Enter Item Info" wrapText="true">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="-8.0" prefHeight="44.0" prefWidth="347.0" text="Enter Item Info" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
@@ -19,5 +19,10 @@
       <Button fx:id="ConfirmButton" layoutX="176.0" layoutY="315.0" mnemonicParsing="false" onAction="#confirm" prefHeight="61.0" prefWidth="114.0" text="Confirm" />
       <Button fx:id="CancelButton" layoutX="311.0" layoutY="315.0" mnemonicParsing="false" onAction="#cancel" prefHeight="61.0" prefWidth="114.0" text="Cancel" />
       <TextField fx:id="ItemLoc" alignment="CENTER" layoutX="225.0" layoutY="200.0" prefHeight="32.0" prefWidth="150.0" promptText="Item Location" />
+      <Label fx:id="errorText" alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="14.0" prefHeight="44.0" prefWidth="347.0" textFill="RED" wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

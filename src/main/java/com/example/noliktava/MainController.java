@@ -111,9 +111,12 @@ public class MainController {
 
     @FXML
     void DeleteItem() throws Exception{
-
-
-
+        items.remove(selectedItem);
+        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        Stage stage = (Stage) deleteItemButton.getScene().getWindow();
+        stage.setTitle("Warehouse");
+        stage.setScene(new Scene(root));
+        SaveItemsToJSON();
     }
 }
 
