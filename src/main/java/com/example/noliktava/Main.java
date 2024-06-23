@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class Main extends Application {
+public class Main extends Application implements Runnable{
 
     static int workerID;
 
@@ -117,13 +117,18 @@ public class Main extends Application {
         reader.close();
     }
 
-    public static void main(String[] args) throws Exception  {
+    public static void main(String[] args) throws Exception   {
+       Main obj1 = new Main();
+       Thread thread1 = new Thread(obj1);
+
+
+       thread1.start();
+
         initialWorkersReadFromJSON();
         initialItemsReadFromJSON();
+    }
+
+    public void run()  {
         launch();
-
-
-
-
     }
 }

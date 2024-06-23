@@ -26,11 +26,13 @@ public class LoginController {
     @FXML
     private Label wrongInfo;
 
+    public static String musicFile = "src/main/resources/com/example/noliktava/sound/utomp3.com - Windows Vista Startup Animation.mp3";
+
 
     @FXML
     void login() throws Exception {
 
-        String musicFile = "src/main/resources/com/example/noliktava/sound/utomp3.com - Windows Vista Startup Animation.mp3";
+
 
         Media sound = new Media(new File(musicFile).toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);

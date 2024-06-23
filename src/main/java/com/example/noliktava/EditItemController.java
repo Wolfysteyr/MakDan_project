@@ -14,7 +14,7 @@ import static com.example.noliktava.Main.SaveItemsToJSON;
 import static com.example.noliktava.Main.items;
 import static com.example.noliktava.MainController.selectedItem;
 
-public class editItemController {
+public class EditItemController {
 
     @FXML
     private Button CancelButton;

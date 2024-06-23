@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #bfb69d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.noliktava.editItemController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #bfb69d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.noliktava.EditItemController">
     <children>
         <TextField fx:id="ItemName" alignment="CENTER" layoutX="226.0" layoutY="50.0" prefHeight="32.0" prefWidth="150.0" promptText="Item Name" />
         <TextField fx:id="ItemNum" alignment="CENTER" layoutX="226.0" layoutY="100.0" prefHeight="32.0" prefWidth="150.0" promptText="Item Number" />

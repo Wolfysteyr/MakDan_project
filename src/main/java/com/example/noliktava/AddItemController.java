@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import static com.example.noliktava.Main.SaveItemsToJSON;
 import static com.example.noliktava.Main.items;
 
-public class addItemController {
+public class AddItemController {
 
     @FXML
     private Button CancelButton;
