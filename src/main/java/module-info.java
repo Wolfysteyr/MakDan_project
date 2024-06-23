@@ -4,6 +4,8 @@ module com.example.noliktava {
     requires org.json;
     requires json.simple;
     requires com.google.gson;
+    requires javafx.media;
+    requires lombok;
 
 
     opens com.example.noliktava to javafx.fxml;

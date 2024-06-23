@@ -1,25 +1,14 @@
 package com.example.noliktava;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class Worker {
 
-    private int ID;
-    private String name;
+    @Getter @Setter private int ID;
+    @Getter @Setter private String name;
 
-    public int getID() {
-        return ID;
-    }
 
-    public void setID(int ID) {
-        this.ID = ID;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public Worker() {
     }

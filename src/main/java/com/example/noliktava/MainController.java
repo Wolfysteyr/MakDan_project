@@ -10,7 +10,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 import static com.example.noliktava.Main.*;
 
@@ -92,6 +96,12 @@ public class MainController {
         Stage stage = (Stage) logoutButton.getScene().getWindow();
         stage.setTitle("Login");
         stage.setScene(new Scene(root));
+
+        String musicFile = "src/main/resources/com/example/noliktava/sound/y2mate.com - Windows Vista shutdown sound.mp3";
+
+        Media sound = new Media(new File(musicFile).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
     }
 
     @FXML

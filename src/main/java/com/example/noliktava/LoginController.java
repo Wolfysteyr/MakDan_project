@@ -8,6 +8,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import java.io.File;
 
 import static com.example.noliktava.Main.workerID;
 import static com.example.noliktava.Main.workers;
@@ -26,6 +29,12 @@ public class LoginController {
 
     @FXML
     void login() throws Exception {
+
+        String musicFile = "src/main/resources/com/example/noliktava/sound/utomp3.com - Windows Vista Startup Animation.mp3";
+
+        Media sound = new Media(new File(musicFile).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+
         boolean success = false;
 
         for (int i = 0; i < workers.size(); i++) {
@@ -39,6 +48,7 @@ public class LoginController {
                 stage.setScene(new Scene(root));
                 stage.show();
                 success = true;
+                mediaPlayer.play();
 
                 break;
             }

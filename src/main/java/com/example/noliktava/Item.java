@@ -1,42 +1,14 @@
 package com.example.noliktava;
-
+import lombok.Getter;
+import lombok.Setter;
 public class Item {
-    private String name;
-    private int number;
-    private int amount;
-    private String  location;
+    @Getter @Setter private String name;
+    @Getter @Setter private int number;
+    @Getter @Setter private int amount;
+    @Getter @Setter private String  location;
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
 
     public Item() {
     }
